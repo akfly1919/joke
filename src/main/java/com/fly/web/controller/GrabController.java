@@ -31,8 +31,8 @@ public class GrabController {
     private ShardedJedisPool shardedJedisPool;
 	@RequestMapping("/go.do")
 	@ResponseBody
-	public String grab() throws Throwable{
-	    String url = "http://www.qiushibaike.com/text/page/2/";
+	public String grab(String page) throws Throwable{
+	    String url = "http://www.qiushibaike.com/text/page/"+page+"/";
 	    String exp = "//*[@id=\"content-left\"]/div[*]/a[1]";
 	    
 	    ShardedJedis jedis = shardedJedisPool.getResource();

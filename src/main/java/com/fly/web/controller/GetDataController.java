@@ -19,7 +19,7 @@ public class GetDataController {
 	@Autowired
 	private ShardedJedisPool shardedJedisPool;
 	
-	int pageSize=3;
+	int pageSize=10;
 
 	@ResponseBody
 	@RequestMapping(value = "/hi.do")
