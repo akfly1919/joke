@@ -28,12 +28,12 @@ public class HuohuJsonController {
 	    for(String text:texts){
 	    	Item i=new Item();
 	    	i.setTitle(text.substring(0,10));
-	    	i.setUrl("http://joke.miodog.com");
+	    	i.setUrl("http://joke.uhdog.com");
 	    	xh.addItem(i);
 	    }
 	    xh.setNote("文档编码：UTF-8，联系电话13810017902");
 	    xh.setContact("13810017902");
-	    xh.setHomepage("http://joke.miodog.com");
+	    xh.setHomepage("http://joke.uhdog.com");
 	    xh.setCreate_time((new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date()));
 		return JSON.toJSONString(xh);
 	}
