@@ -16,32 +16,30 @@
 <meta name="robots" content="noarchive" />
 <link href="css/app.min.css" media="screen, projection" rel="stylesheet"
 	type="text/css" />
-<script type="text/javascript" src="js/jquery.js"></script> 
-<script >
-	function getdata(u,c){
-		$.ajax({url:u+"?page="+c,dataType:"json",success:function(msg){
-			$("#content-left > div").hide();
-			for(var i=0;i<msg.length;i++){
-				var s=$("#content-left > div :eq(0)").clone().show();
-				var s1=s.find("span").text(msg[i]);
-				$("#content-left >ul").before(s);
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+	function getdata(u, c) {
+		$.ajax({
+			url : u + "?page=" + c,
+			dataType : "json",
+			success : function(msg) {
+				$("#content-left > div").hide();
+				for (var i = 0; i < msg.length; i++) {
+					var s = $("#content-left > div :eq(0)").clone().show();
+					var s1 = s.find("span").text(msg[i]);
+					$("#content-left >ul").before(s);
+				}
 			}
-		}});
+		});
 	}
-	$(function(){
-		getdata("/getdata/hi.do",1);
-		
-		$(".pagination > li :eq(0)").bind("click",function(){
-			getdata("/getdata/hi.do",0);
+	$(function() {
+		getdata("/getdata/hi.do", 1);
+
+		$(".pagination > li :eq(0)").bind("click", function() {
+			getdata("/getdata/hi.do", 0);
 		});
 	})
 </script>
-<script type="text/javascript">
-var sogou_ad_id=688902;
-var sogou_ad_height=300;
-var sogou_ad_width=120;
-</script>
-<script type="text/javascript" charset="gb2312" src="http://images.sohu.com/cs/jsfile/js/f.js"></script>
 
 </head>
 <body>
@@ -51,9 +49,9 @@ var sogou_ad_width=120;
 
 	<div id="header" class="head">
 		<div class="content-block">
-			<div class="logo" id="hd_logo">
-				<a href="/"><h1>v5客</h1></a>
-			</div>
+<!-- 			<div class="logo" id="hd_logo"> -->
+<!-- 				<a href="/"><h1>v5客</h1></a> -->
+<!-- 			</div> -->
 			<div id="menu" class="menu-bar menu clearfix" style="margin: 0 10px">
 				<a id="highlight" href="/" rel="nofollow">热门</a> <a href="/">24小时</a>
 				<a href="/">热图</a> <a href="/">文字</a> <a href="/">穿越</a> <a href="/">糗图</a>
@@ -76,7 +74,7 @@ var sogou_ad_width=120;
 				<div class="article block untagged mb15">
 					<div class="author clearfix">
 						<a href="#" target="_blank" rel="nofollow"> <img
-							src="static/2016090720273033.JPEG" alt="没有敏感"/></a> <a href="#"
+							src="static/2016090720273033.JPEG" alt="没有敏感" /></a> <a href="#"
 							target="_blank" title="没有敏感">
 							<h2>没有敏感</h2>
 						</a>
@@ -91,8 +89,8 @@ var sogou_ad_width=120;
 					<div class="single-clear"></div>
 				</div>
 				<ul class="pagination">
-					<li><a href="#" rel="nofollow"> <span
-							class="next"> 摇一摇 </span>
+					<li><a href="#" rel="nofollow"> <span class="next">
+								摇一摇 </span>
 					</a></li>
 				</ul>
 
@@ -119,8 +117,8 @@ var sogou_ad_width=120;
 					<div class="sidebar-hot clearfix">
 						<h3>爆笑糗事精选</h3>
 						<ul>
-							<li class="item"><a href="#"
-								title="逻辑能力还的人" rel="nofollow"> <span><img
+							<li class="item"><a href="#" title="逻辑能力还的人" rel="nofollow">
+									<span><img
 										src="static/app117465973.jpg?imageView2/1/w/146/h/146"
 										alt="逻辑能力还的人"></span>
 							</a> <a href="#" title="逻辑能力还的人">
@@ -130,15 +128,36 @@ var sogou_ad_width=120;
 						</ul>
 					</div>
 					<div class="sidebar-tag clearfix">
-						<h3>热门话题</h3>
-
-						<div class="sidebar-tag-block">
-
-							<a href="#">网游经典搞笑名字</a> <a href="#">抓狂网v5客</a>
-
-
-						</div>
+						<script type="text/javascript">
+							var sogou_ad_id = 688981;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
 					</div>
+					<div class="sidebar-tag clearfix">
+						<script type="text/javascript">
+							var sogou_ad_id = 688987;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+					</div>
+					
+					<div class="sidebar-tag clearfix">
+						<script type="text/javascript">
+							var sogou_ad_id = 688987;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+					</div>
+
 				</div>
 			</div>
 
@@ -148,14 +167,11 @@ var sogou_ad_width=120;
 
 
 	<div class="foot">
-		<div class="foot-nav clearfix">
-			
-		</div>
+		<div class="foot-nav clearfix"></div>
 		<div class="foot-copyrights">
 			<p>© v5ke.com v5客版权所有</p>
 
-			<p>
-			</p>
+			<p></p>
 		</div>
 	</div>
 
