@@ -6,32 +6,51 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
 	<meta name="renderer" content="webkit" />
 	<meta name="applicable-device" content="pc">
-		<title>我认识了一个女孩，我们一见钟情，不到一个小时就有了夫妻之实，在床上她很努力的配合我，但我突 - 糗事百科</title>
+		<title>我认识了一个女孩，我们一见钟情，不到一个小时就有了夫妻之实，在床上她很努力的配合我，但我突 - v5百科</title>
 		<meta name="description"
 			content="我认识了一个女孩，我们一见钟情，不到一个小时就有了夫妻之实，在床上她很努力的配合我，但我突然不爱她了，就象征性的给了几百分手费    过分吗？      这位民警，你告诉我，过分吗？" />
 		<meta name="keywords" content="过分,一见钟情,突然,努力,我们," />
-<link href="css/app.min.css" media="screen, projection" rel="stylesheet"
-	type="text/css" />
-	<script type="text/javascript">
-var sogou_ad_id=698082;
-var sogou_ad_height=300;
-var sogou_ad_width=120;
-</script>
-<script type="text/javascript" charset="gb2312" src="http://images.sohu.com/cs/jsfile/js/f.js"></script>
-	
+		<link href="css/app.min.css" media="screen, projection"
+			rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+		function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+		$(function() {
+			var id =getUrlParam('id');
+			var next=id-1+2;
+			$("#single-next-link-button").bind("click",function(){
+				window.location.href=('http://joke.uhdog.com/detail.html?id='+next);
+			});
+			$.ajax({
+				url : "/getdata/go.do?id=" + id,
+				dataType : "json",
+				success : function(msg) {
+					$(".content").text(msg);
+				}
+			});
+		})
+		</script>
+		<script type="text/javascript">
+			var sogou_ad_id = 698082;
+			var sogou_ad_height = 300;
+			var sogou_ad_width = 120;
+		</script>
+<script type="text/javascript" charset="gb2312"
+	src="http://images.sohu.com/cs/jsfile/js/f.js"></script>
+
 </head>
 <body>
 
 	<div id="header" class="head">
 		<div class="content-block">
-			<div class="logo" id="hd_logo">
-				<a href="/"><h1>糗事百科</h1></a>
-			</div>
 			<div id="menu" class="menu-bar menu clearfix" style="margin: 0 10px">
-				<a href="/" rel="nofollow">热门</a> <a href="#">24小时</a> <a
-					href="//">热图</a> <a href="#">文字</a> <a href="/">穿越</a>
-				<a href="/">糗图</a> <a href="#">新鲜</a> <a
-					class="fn-signin-required" href="javascript:void(0);"
+				<a href="/" rel="nofollow">热门</a> <a href="#">24小时</a> <a href="//">热图</a>
+				<a href="#">文字</a> <a href="/">穿越</a> <a href="/">糗图</a> <a href="#">新鲜</a>
+				<a class="fn-signin-required" href="javascript:void(0);"
 					data-go="/add" rel="nofollow">投稿</a>
 				<!--<a href="http://www.youliaodao.cn" target="_blank" rel="nofollow">百科</a>-->
 			</div>
@@ -49,9 +68,7 @@ var sogou_ad_width=120;
 		<div class="content-block clearfix">
 
 			<div class="col1">
-				<div class="source">
-
-				</div>
+				<div class="source"></div>
 
 				<div class='alert_coll_page' id='alert_coll_page'>
 					<div class='alert_coll_bg'></div>
@@ -67,8 +84,7 @@ var sogou_ad_width=120;
 
 					<div class="author clearfix">
 						<a href="/users/32655618/" target="_blank" rel="nofollow"> <img
-							src="static/2016090720273033.JPEG"
-							alt="A雷疯A(朋友)" />
+							src="static/2016090720273033.JPEG" alt="A雷疯A(朋友)" />
 						</a> <a href="#" target="_blank" title="A雷疯A(朋友)">
 							<h2>A雷疯A(朋友)</h2>
 						</a>
@@ -76,34 +92,34 @@ var sogou_ad_width=120;
 					</div>
 
 
-						<div id="single-next-link" title="下一条">
+					<div id="single-next-link" title="下一条">
 
 
-							<div class="content">
+						<div class="content">
 
-								我认识了一个女孩，我们一见钟情，不到一个小时就有了夫妻之实，在床上她很努力的配合我，但我突然不爱她了，就象征性的给了几百分手费
-								过分吗？ 这位民警，你告诉我，过分吗？</div>
-
-
+							我认识了一个女孩，我们一见钟情，不到一个小时就有了夫妻之实，在床上她很努力的配合我，但我突然不爱她了，就象征性的给了几百分手费
+							过分吗？ 这位民警，你告诉我，过分吗？</div>
 
 
-						</div>
 
 
-						<div class='page-nav-list'>
-							<div id='single-pre-link'
-								class='page-nav-list-bian page-nav-list-pre'>上一条</div>
-							<div id='single-next-link-button' class='page-nav-list-next'>下一条，你懂的</div>
-							<div id='single-coll'
-								class='page-nav-list-bian page-nav-list-coll'>收藏本页面</div>
-						</div>
+					</div>
 
-						<div id="qiushi_counts_117723692"
-							class="stats-buttons bar clearfix">
-						</div>
-						<div class="single-share">
-						</div>
-						<div class="single-clear"></div> <!-- like user --> <!-- god cmt -->
+
+					<div class='page-nav-list'>
+<!-- 						<div id='single-pre-link' -->
+<!-- 							class='page-nav-list-bian page-nav-list-pre'>上一条</div> -->
+						<div id='single-next-link-button' class='page-nav-list-next'>下一条，你懂的</div>
+						<div id='single-coll'
+							class='page-nav-list-bian page-nav-list-coll'>收藏本页面</div>
+					</div>
+
+					<div id="qiushi_counts_117723692"
+						class="stats-buttons bar clearfix"></div>
+					<div class="single-share"></div>
+					<div class="single-clear"></div>
+					<!-- like user -->
+					<!-- god cmt -->
 				</div>
 
 
@@ -119,14 +135,14 @@ var sogou_ad_width=120;
 
 
 
-				<input type="hidden" value="/article/117665294" id='articleNextLink' />
+				<input type="hidden" value="" id='articleNextLink' />
 				<input type="hidden" value="/article/117660750" id='articlePreLink' />
 				<input type="hidden" value=1 id='isArticle' />
 
 			</div>
 
 
-		<div class="col2">
+			<div class="col2">
 				<div id="sidebar" class="sidebar">
 					<div class="sidebar-tutorial clearfix">
 						<h3>糗百小提示</h3>
@@ -146,7 +162,7 @@ var sogou_ad_width=120;
 						</div>
 					</div>
 					<div class="sidebar-hot clearfix">
-						<h3>爆笑糗事精选</h3>
+						<h3>爆笑v5精选</h3>
 						<ul>
 							<li class="item"><a href="#" title="逻辑能力还的人" rel="nofollow">
 									<span><img
@@ -169,13 +185,14 @@ var sogou_ad_width=120;
 
 	<div class="foot">
 		<div class="foot-nav clearfix">
-		<script type="text/javascript">
-var sogou_ad_id=698080;
-var sogou_ad_height=90;
-var sogou_ad_width=728;
-</script>
-<script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
-		
+			<script type="text/javascript">
+				var sogou_ad_id = 698080;
+				var sogou_ad_height = 90;
+				var sogou_ad_width = 728;
+			</script>
+			<script type='text/javascript'
+				src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
 		</div>
 		<div class="foot-copyrights">
 			<p>© v5ke.com v5客版权所有</p>
