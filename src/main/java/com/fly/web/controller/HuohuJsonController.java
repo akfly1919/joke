@@ -25,10 +25,11 @@ public class HuohuJsonController {
 	    ShardedJedis jedis = shardedJedisPool.getResource();
 	    Xiaohua xh=new Xiaohua();
 	    List<String> texts = jedis.lrange("textList", 0, 6);
+	    int j=0;
 	    for(String text:texts){
 	    	Item i=new Item();
 	    	i.setTitle(text.substring(0,10));
-	    	i.setUrl("http://joke.uhdog.com");
+	    	i.setUrl("http://joke.uhdog.com/detail.html?id="+(j++));
 	    	xh.addItem(i);
 	    }
 	    xh.setNote("文档编码：UTF-8，联系电话13810017902");

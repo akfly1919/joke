@@ -42,4 +42,22 @@ public class GetDataController {
 		System.out.println(texts.size());
 		return JSON.toJSONString(texts);
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/go.do")
+	public String go(String id) {
+		ShardedJedis jedis = shardedJedisPool.getResource();
+		long p=0;
+		if(id==null){
+			p=0;
+		}else{
+			try{
+				p=Integer.valueOf(id);
+			}catch(Throwable a){
+				p=0;
+			}
+		}
+		String text = jedis.lindex("textList",p);
+		return JSON.toJSONString(text);
+	}
 }
