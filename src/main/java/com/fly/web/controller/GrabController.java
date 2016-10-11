@@ -62,6 +62,7 @@ public class GrabController {
 	        jedis.lpush("textList", ss);
 	        System.out.println(ss);
 	    }
+	    jedis.close();
 		return "ok";
 	}
 }

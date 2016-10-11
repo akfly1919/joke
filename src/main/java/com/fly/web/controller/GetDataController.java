@@ -18,46 +18,60 @@ import redis.clients.jedis.ShardedJedisPool;
 public class GetDataController {
 	@Autowired
 	private ShardedJedisPool shardedJedisPool;
-	
-	int pageSize=10;
+
+	int pageSize = 10;
 
 	@ResponseBody
 	@RequestMapping(value = "/hi.do")
 	public String hi(String page) {
-		ShardedJedis jedis = shardedJedisPool.getResource();
-		long size=jedis.llen("textList");
-		Random r=new Random();
-		int p=0;
-		if(page==null||"0".equals(page)){
-			p=r.nextInt((int)(size/pageSize));
-			if(p==0){
-				p=1;
+		System.out.println("GetDataController.hi" + page);
+		try {
+			ShardedJedis jedis = shardedJedisPool.getResource();
+			long size = jedis.llen("textList");
+			Random r = new Random();
+			int p = 0;
+			if (page == null || "0".equals(page)) {
+				p = r.nextInt((int) (size / pageSize));
+				if (p == 0) {
+					p = 1;
+				}
+			} else {
+				p = Integer.valueOf(page);
 			}
-		}else{
-			p=Integer.valueOf(page);
+			long begin = 0l + (p - 1) * pageSize;
+			long end = begin + pageSize - 1;
+			System.out.println("GetDataController.hi begin=" + begin + ",end=" + end);
+			List<String> texts = jedis.lrange("textList", begin, end);
+			System.out.println("GetDataController.hi " + texts);
+			jedis.close();
+			return JSON.toJSONString(texts);
+		} catch (Throwable t) {
+			t.printStackTrace();
 		}
-		long begin = 0l+(p-1)*pageSize;
-		long end = begin+pageSize-1;
-		List<String> texts = jedis.lrange("textList", begin, end);
-		System.out.println(texts.size());
-		return JSON.toJSONString(texts);
+		return "";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping(value = "/go.do")
 	public String go(String id) {
-		ShardedJedis jedis = shardedJedisPool.getResource();
-		long p=0;
-		if(id==null){
-			p=0;
-		}else{
-			try{
-				p=Integer.valueOf(id);
-			}catch(Throwable a){
-				p=0;
+		try {
+			ShardedJedis jedis = shardedJedisPool.getResource();
+			long p = 0;
+			if (id == null) {
+				p = 0;
+			} else {
+				try {
+					p = Integer.valueOf(id);
+				} catch (Throwable a) {
+					p = 0;
+				}
 			}
+			jedis.close();
+			String text = jedis.lindex("textList", p);
+			return JSON.toJSONString(text);
+		} catch (Throwable t) {
+			t.printStackTrace();
 		}
-		String text = jedis.lindex("textList",p);
-		return JSON.toJSONString(text);
+		return "";
 	}
 }

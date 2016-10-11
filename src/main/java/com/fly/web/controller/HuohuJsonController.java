@@ -36,6 +36,7 @@ public class HuohuJsonController {
 	    xh.setContact("13810017902");
 	    xh.setHomepage("http://joke.uhdog.com");
 	    xh.setCreate_time((new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date()));
+	    jedis.close();
 		return JSON.toJSONString(xh);
 	}
 
