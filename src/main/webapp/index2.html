@@ -1,21 +1,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
-		<meta name="renderer" content="webkit">
-			<meta name="applicable-device" content="pc">
-				<title>幽默笑话大全_爆笑笑话_笑破你的肚子的搞笑段子 - 糗事百科</title>
-				<meta name="keywords" content="幽默笑话,爆笑笑话,搞笑段子,笑话大全 爆笑">
-					<meta name="description"
-						content="糗事百科官网提供幽默笑话大全,糗百网分享的各种爆笑笑话、搞笑段子,小心笑破你的肚子,精彩搞笑笑话就在糗事百科！">
-						<meta http-equiv="mobile-agent"
-							content="format=xhtml;url=http://www.qiushibaike.com/">
-							<meta http-equiv="mobile-agent"
-								content="format=html5;url=http://www.qiushibaike.com/">
-								<meta name="robots" content="noarchive">
-									<link href="css/app.min.css" media="screen, projection"
-										rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+<meta name="renderer" content="webkit" />
+<meta name="applicable-device" content="pc" />
+<title>幽默笑话大全_爆笑笑话_笑破你的肚子的搞笑段子 - v5客</title>
+<meta name="keywords" content="幽默笑话,爆笑笑话,搞笑段子,笑话大全 爆笑" />
+<meta name="description"
+	content="v5客官网提供幽默笑话大全,糗百网分享的各种爆笑笑话、搞笑段子,小心笑破你的肚子,精彩搞笑笑话就在v5客！" />
+<meta http-equiv="mobile-agent"
+	content="format=xhtml;url=http://www.v5ke.com/" />
+<meta http-equiv="mobile-agent"
+	content="format=html5;url=http://www.v5ke.com/" />
+<meta name="robots" content="noarchive" />
+<link href="css/app.min.css" media="screen, projection" rel="stylesheet"
+	type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+	function getdata(u, c) {
+		$.ajax({
+			url : u + "?page=" + c,
+			dataType : "json",
+			success : function(msg) {
+				$("#content-left > div").hide();
+				for (var i = 0; i < msg.length; i++) {
+					var s = $("#content-left > div :eq(0)").clone().show();
+					var msg1=eval('(' + msg[i] + ')');
+					var s1 = s.find("span").text(msg1.context);
+					$("#content-left >ul").before(s);
+				}
+			}
+		});
+	}
+	$(function() {
+		getdata("/getdata/hiChenren.do", 1);
+
+		$(".pagination > li :eq(0)").bind("click", function() {
+			getdata("/getdata/hiChenren.do", 0);
+		});
+	})
+</script>
+
 </head>
 <body>
 	<div id="BAIDU_DUP_fp_wrapper"
@@ -24,15 +50,13 @@
 
 	<div id="header" class="head">
 		<div class="content-block">
-			<div class="logo" id="hd_logo">
-				<a href="/"><h1>糗事百科</h1></a>
-			</div>
+<!-- 			<div class="logo" id="hd_logo"> -->
+<!-- 				<a href="/"><h1>v5客</h1></a> -->
+<!-- 			</div> -->
 			<div id="menu" class="menu-bar menu clearfix" style="margin: 0 10px">
-				<a href="/" rel="nofollow">热门</a> <a href="/hot/">24小时</a> <a
-					href="/imgrank/">热图</a> <a id="highlight" href="/text/">文字</a> <a
-					href="/history/">穿越</a> <a href="/pic/">糗图</a> <a href="/textnew/">新鲜</a>
-				<a class="fn-signin-required" href="javascript:void(0);"
-					data-go="/add" rel="nofollow">投稿</a>
+				<a id="highlight" href="/" rel="nofollow">热门</a> <a href="/">24小时</a>
+				<a href="/">热图</a> <a href="/">文字</a> <a href="/">穿越</a> <a href="/">糗图</a>
+				<a href="/">新鲜</a>
 				<!--<a href="http://www.youliaodao.cn" target="_blank" rel="nofollow">百科</a>-->
 			</div>
 			<div class="userbar clearfix">
@@ -48,11 +72,11 @@
 	<div id="content" class="main">
 		<div class="content-block clearfix">
 			<div id="content-left" class="col1">
-				<div class="article block untagged mb15" id="qiushi_tag_117469780">
+				<div class="article block untagged mb15">
 					<div class="author clearfix">
 						<a href="#" target="_blank" rel="nofollow"> <img
-							src="static/2016090720273033.JPEG" alt="没有敏感"></a> <a
-							href="#" target="_blank" title="没有敏感">
+							src="static/2016090720273033.JPEG" alt="没有敏感" /></a> <a href="#"
+							target="_blank" title="没有敏感">
 							<h2>没有敏感</h2>
 						</a>
 						<div class="articleGender manIcon">19</div>
@@ -66,27 +90,8 @@
 					<div class="single-clear"></div>
 				</div>
 				<ul class="pagination">
-					<li><span class="current"> 1 </span></li>
-					<li><a href="/text/page/2?s=4910994" rel="nofollow"> <span
-							class="page-numbers"> 2 </span>
-					</a></li>
-					<li><a href="/text/page/3?s=4910994" rel="nofollow"> <span
-							class="page-numbers"> 3 </span>
-					</a></li>
-					<li><a href="/text/page/4?s=4910994" rel="nofollow"> <span
-							class="page-numbers"> 4 </span>
-					</a></li>
-					<li><a href="/text/page/5?s=4910994" rel="nofollow"> <span
-							class="page-numbers"> 5 </span>
-					</a></li>
-					<li><span class="dots"> … </span></li>
-					<li><a href="/text/page/35?s=4910994" rel="nofollow"> <span
-							class="page-numbers"> 35 </span>
-					</a></li>
-
-
-					<li><a href="/text/page/2?s=4910994" rel="nofollow"> <span
-							class="next"> 下一页 </span>
+					<li><a href="#" rel="nofollow"> <span class="next">
+								摇一摇 </span>
 					</a></li>
 				</ul>
 
@@ -98,14 +103,14 @@
 						<div class="sidebar-tutorial-block">
 							<div class="sidebar-tutorial-keyboard"></div>
 							<div class="sidebar-tutorial-text">
-								按 Ctrl+D 键，<br>把糗事百科加入收藏夹 
+								按 Ctrl+D 键，<br>把v5客加入收藏夹 
 							</div>
 						</div>
 					</div>
 					<div class="sidebar-tag clearfix">
 						<h3>爆笑笑话大全</h3>
 						<div class="sidebar-tag-block">
-<!-- 							<a href="/joke/35507/">4个字的搞笑名字</a> <a href="/joke/35508/">2个字的搞笑名字</a> -->
+							<!-- 							<a href="/joke/35507/">4个字的搞笑名字</a> <a href="/joke/35508/">2个字的搞笑名字</a> -->
 
 
 						</div>
@@ -113,26 +118,47 @@
 					<div class="sidebar-hot clearfix">
 						<h3>爆笑糗事精选</h3>
 						<ul>
-							<li class="item"><a href="/article/117465973"
-								title="逻辑能力还的人" rel="nofollow"> <span><img
+							<li class="item"><a href="#" title="逻辑能力还的人" rel="nofollow">
+									<span><img
 										src="static/app117465973.jpg?imageView2/1/w/146/h/146"
 										alt="逻辑能力还的人"></span>
-							</a> <a href="/article/117465973" title="逻辑能力还的人">
+							</a> <a href="#" title="逻辑能力还的人">
 									<p>逻辑能力还的人</p>
 							</a></li>
 
 						</ul>
 					</div>
 					<div class="sidebar-tag clearfix">
-						<h3>热门话题</h3>
-
-						<div class="sidebar-tag-block">
-
-							<a href="/joke/28299/">网游经典搞笑名字</a> <a href="/joke/8489/">抓狂网糗事百科</a>
-
-
-						</div>
+						<script type="text/javascript">
+							var sogou_ad_id = 688981;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
 					</div>
+					<div class="sidebar-tag clearfix">
+						<script type="text/javascript">
+							var sogou_ad_id = 688987;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+					</div>
+					
+					<div class="sidebar-tag clearfix">
+						<script type="text/javascript">
+							var sogou_ad_id = 688987;
+							var sogou_ad_height = 600;
+							var sogou_ad_width = 160;
+						</script>
+						<script type='text/javascript'
+							src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+					</div>
+
 				</div>
 			</div>
 
@@ -142,72 +168,11 @@
 
 
 	<div class="foot">
-		<div class="foot-nav clearfix">
-			<div class="foot-nav-col">
-				<h3>关于</h3>
-				<ul>
-					<li><a href="http://about.qiushibaike.com/web_jobs.html#team"
-						target="_blank" rel="nofollow"> 关于糗百 </a></li>
-					<li><a href="http://about.qiushibaike.com/web_jobs.html#tech"
-						target="_blank" rel="nofollow"> 加入我们 </a></li>
-					<li><a
-						href="http://about.qiushibaike.com/web_jobs.html#contact"
-						target="_blank" rel="nofollow"> 联系方式 </a></li>
-				</ul>
-			</div>
-			<div class="foot-nav-col">
-				<h3>帮助</h3>
-				<ul>
-					<li><a href="http://about.qiushibaike.com/feedback.html"
-						target="_blank" rel="nofollow"> 在线反馈 </a></li>
-					<li><a href="http://about.qiushibaike.com/agreement.html"
-						target="_blank" rel="nofollow"> 用户协议 </a></li>
-					<li><a href="http://about.qiushibaike.com/policy.html"
-						target="_blank" rel="nofollow"> 隐私政策 </a></li>
-				</ul>
-			</div>
-			<div class="foot-nav-col">
-				<h3>下载</h3>
-				<ul>
-					<li><a
-						href="http://android.myapp.com/android/appdetail.jsp?appid=107431&amp;icfa=15144196000105020000&amp;lmid=2031"
-						target="_blank" rel="external nofollow"> Android 客户端 </a></li>
-					<li><a href="http://itunes.apple.com/app/id422853458"
-						target="_blank" rel="external nofollow"> iPhone 客户端 </a></li>
-				</ul>
-			</div>
-			<div class="foot-nav-col">
-				<h3>关注</h3>
-				<ul>
-					<li><a href="#" class="foot-wechat"> 微信
-							<div class="foot-wechat-tips">
-								<span class="foot-wechat-icon"></span> 手机扫描二维码关注
-							</div>
-					</a></li>
-					<li><a href="http://weibo.com/qiushibaike" target="_blank"
-						rel="external nofollow"> 新浪微博 </a></li>
-					<li><a href="http://user.qzone.qq.com/1492495058"
-						target="_blank" rel="external nofollow"> QQ空间 </a></li>
-				</ul>
-			</div>
-			<div class="foot-nav-col">
-				<h3>组织</h3>
-				<ul>
-					<li><a
-						href="http://shang.qq.com/wpa/qunwpa?idkey=da34d190ca97a0b21d64ebc6f3ab72c076ed35820e629b78fcf9f6a78f7063cd"
-						target="_blank" rel="external nofollow"> 网站反馈群 </a></li>
-					<li><a
-						href="http://user.qzone.qq.com/1492495058/blog/1408597608"
-						target="_blank" rel="external nofollow"> 官方粉丝群 </a></li>
-				</ul>
-			</div>
-		</div>
+		<div class="foot-nav clearfix"></div>
 		<div class="foot-copyrights">
-			<p>© Qiushibaike.com 糗事百科版权所有</p>
+			<p>© v5ke.com v5客版权所有</p>
 
-			<p>
-				<span>京ICP备14028348号-1</span> <span>京ICP证140448号</span> <span>京公网安备11010502026088</span>
-			</p>
+			<p></p>
 		</div>
 	</div>
 
@@ -217,17 +182,17 @@
 			<div class="signin-account clearfix">
 				<h4 class="social-signin-heading">社交帐号登录</h4>
 				<a rel="external nofollow" oauth_href=""
-					href="https://open.weixin.qq.com/connect/qrconnect?appid=wx559af2d26b56c655&amp;redirect_uri=http%3A%2F%2Fwww.qiushibaike.com%2Fsession%3Fsrc%3Dwx&amp;response_type=code&amp;scope=snsapi_login#wechat_redirect"
+					href="https://open.weixin.qq.com/connect/qrconnect?appid=wx559af2d26b56c655&amp;redirect_uri=http%3A%2F%2Fwww.v5ke.com%2Fsession%3Fsrc%3Dwx&amp;response_type=code&amp;scope=snsapi_login#wechat_redirect"
 					class="social-btn social-wechat"> 使用 微信 账号</a> <a
 					rel="external nofollow" oauth_href=""
-					href="https://api.weibo.com/oauth2/authorize?client_id=63372306&amp;redirect_uri=http%3A%2F%2Fwww.qiushibaike.com%2Fsession"
+					href="https://api.weibo.com/oauth2/authorize?client_id=63372306&amp;redirect_uri=http%3A%2F%2Fwww.v5ke.com%2Fsession"
 					class="social-btn social-weibo"> 使用 微博 账号</a> <a
 					rel="external nofollow" oauth_href=""
-					href="https://graph.qq.com/oauth2.0/authorize?which=Login&amp;display=pc&amp;client_id=100251437&amp;response_type=code&amp;redirect_uri=www.qiushibaike.com/session?src=qq"
+					href="https://graph.qq.com/oauth2.0/authorize?which=Login&amp;display=pc&amp;client_id=100251437&amp;response_type=code&amp;redirect_uri=www.v5ke.com/session?src=qq"
 					class="social-btn social-qq"> 使用 QQ 账号 </a>
 			</div>
 			<div class="signin-form clearfix">
-				<h4 class="social-signin-heading">糗事百科账号登录</h4>
+				<h4 class="social-signin-heading">v5客账号登录</h4>
 
 				<form method="post" action="/session">
 					<input type="hidden" name="_xsrf"
@@ -255,9 +220,5 @@
 			class="float-nav-backtop-icon"></span>
 		</a>
 	</div>
-
-
-
-
 </body>
 </html>

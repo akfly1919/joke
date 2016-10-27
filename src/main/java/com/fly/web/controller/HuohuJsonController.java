@@ -3,6 +3,7 @@ package com.fly.web.controller;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import redis.clients.jedis.ShardedJedisPool;
 public class HuohuJsonController {
 	@Autowired
     private ShardedJedisPool shardedJedisPool;
-	@RequestMapping("/new.do")
+	@RequestMapping("/new1.do")
 	@ResponseBody
 	public String grab(String page) throws Throwable{
 	    
@@ -39,7 +40,28 @@ public class HuohuJsonController {
 	    jedis.close();
 		return JSON.toJSONString(xh);
 	}
-
+	@RequestMapping("/new1.do")
+	@ResponseBody
+	public String new1(String page) throws Throwable{
+	    
+	    ShardedJedis jedis = shardedJedisPool.getResource();
+	    Xiaohua xh=new Xiaohua();
+	    List<String> texts = jedis.lrange("chenrenList", 0, 6);
+	    int j=0;
+	    for(String text:texts){
+	    	Item i=new Item();
+	    	Map<String,String> x=JSON.parseObject(text, Map.class);
+	    	i.setTitle(x.get("header"));
+	    	i.setUrl("http://joke.uhdog.com/detail2.html?id="+(j++));
+	    	xh.addItem(i);
+	    }
+	    xh.setNote("文档编码：UTF-8，联系电话13810017902");
+	    xh.setContact("13810017902");
+	    xh.setHomepage("http://joke.uhdog.com");
+	    xh.setCreate_time((new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date()));
+	    jedis.close();
+		return JSON.toJSONString(xh);
+	}
 }
 
 class Xiaohua{
