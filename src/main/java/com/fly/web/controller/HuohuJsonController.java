@@ -1,3 +1,4 @@
+
 package com.fly.web.controller;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class HuohuJsonController {
 	    jedis.close();
 		return JSON.toJSONString(xh);
 	}
-	@RequestMapping("/new1.do")
+	@RequestMapping("/new.do")
 	@ResponseBody
 	public String new1(String page) throws Throwable{
 	    

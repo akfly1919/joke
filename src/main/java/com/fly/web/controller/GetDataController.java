@@ -42,7 +42,7 @@ public class GetDataController {
 			long end = begin + pageSize - 1;
 			System.out.println("GetDataController.hi begin=" + begin + ",end=" + end);
 			List<String> texts = jedis.lrange("textList", begin, end);
-			System.out.println("GetDataController.hi " + texts);
+			System.out.println("GetDataController.hi size:" + texts!=null?texts.size():0);
 			jedis.close();
 			return JSON.toJSONString(texts);
 		} catch (Throwable t) {
