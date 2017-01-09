@@ -36,7 +36,7 @@ public class HttpUtils {
 			.setMalformedInputAction(CodingErrorAction.IGNORE).setUnmappableInputAction(CodingErrorAction.IGNORE)
 			.setCharset(Consts.UTF_8).build();
 
-	public static PoolingHttpClientConnectionManager poolConnManager = null;
+	public static PoolingHttpClientConnectionManager poolConnManager = new PoolingHttpClientConnectionManager();
 
 
 	public static CloseableHttpClient getHttpClient() {
@@ -53,7 +53,7 @@ public class HttpUtils {
 		}
 		BasicHttpClientConnectionManager basicConnManager = new BasicHttpClientConnectionManager();
 		basicConnManager.setConnectionConfig(defaultConnectionConfig);
-		return HttpClients.custom().setConnectionManager(basicConnManager).setDefaultRequestConfig(ec).build();
+		return HttpClients.custom().setConnectionManager(poolConnManager).setDefaultRequestConfig(ec).build();
 	}
 	/*
 	 * 支持get方法
